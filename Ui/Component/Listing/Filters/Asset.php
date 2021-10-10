@@ -33,8 +33,8 @@ class Asset extends Select
      * @param UiComponentFactory $uiComponentFactory
      * @param FilterBuilder $filterBuilder
      * @param FilterModifier $filterModifier
-     * @param GetContentByAssetIdsInterface $getContentIdentities
      * @param OptionSourceInterface $optionsProvider
+     * @param GetContentByAssetIdsInterface $getContentIdentities
      * @param array $components
      * @param array $data
      * @SuppressWarnings(PHPMD.ExcessiveParameterList)
@@ -44,8 +44,8 @@ class Asset extends Select
         UiComponentFactory $uiComponentFactory,
         FilterBuilder $filterBuilder,
         FilterModifier $filterModifier,
-        GetContentByAssetIdsInterface $getContentIdentities,
         OptionSourceInterface $optionsProvider = null,
+        GetContentByAssetIdsInterface $getContentIdentities,
         array $components = [],
         array $data = []
     ) {
