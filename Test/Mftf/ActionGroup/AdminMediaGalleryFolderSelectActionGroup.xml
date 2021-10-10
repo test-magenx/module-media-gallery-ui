@@ -18,6 +18,6 @@
 
         <waitForElementVisible selector="{{AdminMediaGalleryFolderSection.folderInTree(name)}}" stepKey="waitBeforeClickOnFolder"/>
         <click selector="{{AdminMediaGalleryFolderSection.folderInTree(name)}}" stepKey="selectFolder"/>
-        <waitForPageLoad stepKey="waitForFolderContents"/>
+        <waitForLoadingMaskToDisappear stepKey="waitForFolderContents"/>
     </actionGroup>
 </actionGroups>

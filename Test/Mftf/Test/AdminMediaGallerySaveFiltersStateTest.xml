@@ -25,7 +25,6 @@
           <actionGroup ref="ResetAdminDataGridToDefaultViewActionGroup" stepKey="resetAdminDataGridToDefaultView"/>
         </after>
         <actionGroup ref="AdminOpenStandaloneMediaGalleryActionGroup" stepKey="openStandaloneMediaGalleryPage"/>
-        <actionGroup ref="ResetAdminDataGridToDefaultViewActionGroup" stepKey="clearGridFilters"/>
         <actionGroup ref="AdminEnhancedMediaGalleryExpandFilterActionGroup" stepKey="expandFilters"/>
         <actionGroup ref="AdminEnhancedMediaGallerySelectSourceFilterActionGroup" stepKey="applyLocalFilter">
             <argument name="filterValue" value="Local"/>
@@ -35,10 +34,12 @@
         <actionGroup ref="AdminEnhancedMediaGalleryAssertActiveFiltersActionGroup" stepKey="assertFilterApplied">
             <argument name="resultValue" value="Uploaded Locally"/>
         </actionGroup>
-        <actionGroup ref="AdminEnhancedMediaGallerySelectCustomBookmarksViewActionGroup" stepKey="selectDefaultView"/>
+        <actionGroup ref="AdminEnhancedMediaGallerySelectCustomBookmarksViewActionGroup" stepKey="selectDefaultView">
+            <argument name="selectView" value="Default View"/>
+        </actionGroup>
         <actionGroup ref="AdminEnhancedMediaGalleryAssertNoActiveFiltersAppliedActionGroup" stepKey="assertNoActiveFilters"/>
         <actionGroup ref="AdminEnhancedMediaGalleryDeleteGridViewActionGroup" stepKey="deleteView">
-            <argument name="viewToDelete" value="{{NewGridView.name}}"/>
+            <argument name="viewToDelete" value="Test View"/>
         </actionGroup>
     </test>
 </tests>

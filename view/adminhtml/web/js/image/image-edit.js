@@ -219,7 +219,7 @@ define([
 
             if (key === 'enterKey') {
                 event.preventDefault();
-                modalElement.find('.page-action-buttons button.save').trigger('click');
+                modalElement.find('.page-action-buttons button.save').click();
             }
 
             return true;

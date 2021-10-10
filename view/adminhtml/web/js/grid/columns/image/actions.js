@@ -72,7 +72,7 @@ define([
          * Initialize image action events
          */
         initEvents: function () {
-            $(this.imageModel().addSelectedBtnSelector).on('click', function () {
+            $(this.imageModel().addSelectedBtnSelector).click(function () {
                 image.insertImage(
                     this.imageModel().getSelected(),
                     {
@@ -81,7 +81,7 @@ define([
                     }
                 );
             }.bind(this));
-            $(this.imageModel().deleteSelectedBtnSelector).on('click', function () {
+            $(this.imageModel().deleteSelectedBtnSelector).click(function () {
                 this.deleteImageAction(this.imageModel().selected());
             }.bind(this));
 
