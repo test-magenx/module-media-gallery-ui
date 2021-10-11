@@ -8,14 +8,14 @@
 
 <actionGroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/actionGroupSchema.xsd">
-    <actionGroup name="AdminMediaGalleryAssertImageInGridActionGroup">
+    <actionGroup name="AdminMediaGalleryAssertCategoryNameInCategoryGridActionGroup">
         <annotations>
-            <description>Asserts that image exists in media gallery grid</description>
+            <description>Asserts category name in category grid page</description>
         </annotations>
         <arguments>
-            <argument name="title"/>
+            <argument name="categoryName" type="string"/>
         </arguments>
-        <waitForElementVisible selector="{{AdminEnhancedMediaGalleryImageActionsSection.imageInGrid(title)}}" stepKey="waitForImageToBeVisible"/>
 
-    </actionGroup>
+        <seeElement selector="{{AdminMediaGalleryCatalogUiCategoryGridSection.name('1', categoryName)}}" stepKey="assertNameColumn"/>
+     </actionGroup>
 </actionGroups>
